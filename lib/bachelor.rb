@@ -79,21 +79,9 @@ def get_average_age_for_season(data, season)
     end
   end
   return (age_array.inject{|sum, el| sum + el}.to_f / age_array.size).round
-
+  binding.pry
+  # this is pretty complex and I had to look it up.
+  # Important to note is the fact that we converted the avergae of our array
+  # into a float (.to_f) and I was then able to wrap the array in parenthesese
+  # and use .round to round it to the nearest integer.
 end
-
-# "season 10":[
-#    {
-#       "name":"Tessa Horst",
-#       "age":"26",
-#       "hometown":"San Francisco, CA",
-#       "occupation":"Social Worker",
-#       "status":"Winner"
-#    },
-#    {
-#       "name":"Bevin Nicole Powers",
-#       "age":"28",
-#       "hometown":"Palo Alto, CA",
-#       "occupation":"Assistant",
-#       "status":"Week 8"
-#    },
